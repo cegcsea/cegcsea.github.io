@@ -564,7 +564,7 @@ ul.drop{
 }
 .con:hover{
     font-size: 23px;
-    text-decoration: underline solid 3px #00d0ff;
+    text-decoration: underline solid 3px black;
 }
 
 .cona:hover + p{
