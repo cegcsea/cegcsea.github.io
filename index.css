@@ -14,68 +14,12 @@ body,html{
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .carousel-inner > .bg1{
-    background-image: url("ceg.jpeg");
-    height : 100%;
-    width: 100%;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.carousel-inner > .bg2{
-    background-image: url("abacus1.jpg");
-    height : 100%;
-    width: 100%;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.carousel-inner > .bg3{
-    background-image: url("Sync-11.jpg");
-    height : 100%;
-    width: 100%;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
 .bg::before{
     content: '';
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
 	background-color: rgba(1,27,50,0.8);
 }
-
-
-/* i.tgl:focus,i.tgl:active{
-    outline: white;
-} */
-
-/* button.navbar-toggler{
-    border-color: #FFF;
-} */
-/* .click-button {
-    -webkit-animation: mover 1s infinite  alternate;
-    animation: mover 1s infinite  alternate;
-}
-.click-button {
-    -webkit-animation: mover 1s infinite  alternate;
-    animation: mover 1s infinite  alternate;
-}
-@-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-5px); }
-}
-@keyframes mover {
-    10% { transform: translateY(0); }
-    100% { transform: translateY(-5px); }
-} */
-
 
 .csea1 >img {
     animation: pulse 1s infinite ease-in-out alternate;
@@ -130,11 +74,6 @@ to { transform: scale(1.0); }
     color: #00d0ff; 
 } 
 
-/* .border{
-    color: #00d0ff;
-    border:  rgba(96,153,215,.7) solid 1px;
-} */
-
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -156,10 +95,6 @@ to { transform: scale(1.0); }
 
 .div-padd > div >h1{
     text-align: center;
-    /* border-bottom: solid 2px black; */
-    /* text-decoration-line: underline;
-    text-decoration-color: black;
-    text-decoration-style: solid; */
     margin: auto;
 }
 
@@ -219,10 +154,6 @@ to { transform: scale(1.0); }
 .sync.triggeredCSS3{
     transform: scale(1.0);
 }
-
-/* .nav.triggeredCSS3{
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-} */
 
 .margi{
     margin-top: 2%;
@@ -296,20 +227,12 @@ to { transform: scale(1.0); }
 .dropdown-menu{
     background-color: #dedede;
 }
-/* 
-.dropiii >a {
-    background-color: #e02b31;
-} */
 
 .dropdown-item.dropiii > .wide{
     display: block;
     margin:0px;
     width:100%;
 }
-
-/* .dropdown-item.dropiii{
-    background-color: #e02b31;
-} */
 
 .dropdown-item.dropiii > a{
     color: black;
@@ -460,13 +383,13 @@ ul.drop{
     -ms-animation: fadeIn ease 5s;
 }
 
-/* .carosel-item.fade-in {
+.carosel-item.fade-in {
   animation: fadeIn ease 5s;
   -webkit-animation: fadeIn ease 5s;
   -moz-animation: fadeIn ease 5s;
   -o-animation: fadeIn ease 5s;
   -ms-animation: fadeIn ease 5s;
-} */
+}
 
 /* Fade In Bottom Left */
 @keyframes fadeInBottomLeft {
@@ -535,11 +458,6 @@ ul.drop{
 
 /* Footer Styling*/
 
-/* #footer {
-    width: 100%;
-    padding: 0px;
-} */
-
 #footer ul.social li{
 	padding: 3px 0;
 }
@@ -582,14 +500,6 @@ ul.drop{
 .cona + p{
     padding-bottom: 5px;
 }
-
-/* .copyright{
-    float: left;
-}
-
-.credits{
-    float: right;
-} */
 
 .study-content{
     color:white;
@@ -649,11 +559,6 @@ button.study-btn:hover{
     background-size: 40% 2px;
     transition: background-size .5s ease;
 }
-/* .head-under:hover {
-    background-size: 100% 2px;
-} */
-
-
 
 /* Arrow Styling */
 .click-button{
@@ -740,9 +645,6 @@ button.study-btn:hover{
     color:black;
     font-weight:bold;
 }
-/* .develo:hover{
-    text-decoration: underline solid 3px #00d0ff;
-} */
 
 .develop > a:hover > p{
     background-size: 100% 2px;
@@ -789,7 +691,6 @@ a.mai{
 
 .parallax {
     /* The image used */
-    /* background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("images/eye.jpg"); */
     background-image: url("images/e.jpg");
     /* Set a specific height */
     min-height: 500px;
@@ -812,15 +713,6 @@ a.mai{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/* .parallax2::before{
-    content: '';
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(1,27,50,0.8);
-} */
 
 .parallax1 {
     /* The image used */
@@ -875,7 +767,6 @@ a.mai{
   .carosel-control {
     position: absolute;
     top: 50%;
-    /* padding: 15px; */
     transform: translateY(-50%);
     font-size: 30px;
     display: inline-block;
@@ -907,7 +798,6 @@ a.mai{
 .card-img-top.card-img{
     display: block;
     border-radius: 50%;
-    /* width: 50%; */
     width: 160px;
     height: 160px;
     margin-left: auto;
@@ -925,9 +815,6 @@ a.mai{
 
 /* Create four equal columns that sits next to each other
 And also over write left & right padding with internal stylesheet for col*/
-/* div.padd-5{
-    padding-top: 50%;
-} */
 
 .row1 > div {
     padding: 0 4px !important;
@@ -961,8 +848,6 @@ And also over write left & right padding with internal stylesheet for col*/
   }
   /* Modal Content (image) */
   .modal-content {
-    /* margin: auto;
-    display: block;*/
     object-fit: contain;
     margin-right: auto;
     margin-left: auto;
@@ -1028,7 +913,7 @@ And also over write left & right padding with internal stylesheet for col*/
   }
 /* Gallery End */
 
-/*PRELOADING------------ */
+/*PRELOADING*/
 #overlayer {
     width:100%;
     height:100%;  
@@ -1102,9 +987,6 @@ And also over write left & right padding with internal stylesheet for col*/
 /* PRELOADER END */
 
 /* RIPPLE START*/
-/* .ripple{
-  background-position: center;
-} */
 .ripple {
   background-position: center;
   transition: background 0.5s;
