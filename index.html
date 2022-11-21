@@ -531,7 +531,7 @@
                     </div>
                     <div class="card carosel-item border-0" style="background-color: transparent;">
                         <div class="img-div">
-                            <img class="card-img-top card-img" src="team-2022-23/Chiran Jeevi.heif" alt="Chiran Jeevi">
+                            <img class="card-img-top card-img" src="team-2022-23/Chiran Jeevi.jpg" alt="Chiran Jeevi">
                         </div>
                         <div class="card-body">
                             <a href="https://www.linkedin.com/in/chiran-jeevi-93311a147/" class="teamiee-under" target="_blank" title="Visit LinkedIn Profile">
@@ -952,11 +952,14 @@
   </script>
         
         <script>
-            var timer = null,interval = 2000;
+            var timer = null,interval = 2500;
 
             $("#carosel1").mouseleave(function() {
                 if (timer !== null) return;
                 timer = setInterval(function () {
+                    $('.carosel-control-right').trigger('click');
+                    $('.carosel-control-right').trigger('click');
+                    $('.carosel-control-right').trigger('click');
                     $('.carosel-control-right').trigger('click');
                 }, interval); 
             });
