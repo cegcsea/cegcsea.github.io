@@ -203,9 +203,16 @@
           <p><b>Events are scheduled for 2 days.</b>
           <br /><b>Day 1:</b> 28th November 2022 
           <br /><b>Day 2:</b> 29th November 2022</b></p>
-          <p><b>TECH EVENTS</b></p>
+        </div> 
+        <div class="section-title"  data-aos="fade-up">
+          <p><b>TECH EVENTS</b> 
+            
+          <button class="btn btn-outline-primary" id="techEventsBtn" onclick="toggleTechEvents()" type="button" data-bs-toggle="collapse" data-bs-target="#techEvents" aria-expanded="false" aria-controls="techEvents">
+            <i class="ri-arrow-down-s-line" id="techEventsBtnContent"></i>
+          </button></p>
         </div>
 
+        <div class="collapse" id="techEvents">
         <div class="row">
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
@@ -332,9 +339,15 @@
           </div>
           
         </div>
+      </div>
         <div class="section-title" data-aos="fade-up">
-          <p><b>NON-TECH EVENTS</b></p>
+          <p><b>NON-TECH EVENTS</b>
+            <button class="btn btn-outline-primary" id="nonTechEventsBtn" onclick="toggleNonTechEvents()" type="button" data-bs-toggle="collapse" data-bs-target="#nonTechEvents" aria-expanded="false" aria-controls="nonTechEvents">
+              <i class="ri-arrow-down-s-line" id="nonTechEventsBtnContent"></i>
+            </button>
+          </p>
         </div>
+        <div class="collapse" id="nonTechEvents">
         <div class="row">
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
@@ -441,6 +454,7 @@
    
         </div>
       </div>
+      </div>
     </section><!-- End Services Section -->
 
 
@@ -506,6 +520,25 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <script>
+    function toggleTechEvents() {
+      var x = document.getElementById("techEventsBtnContent");
+      if (x.className==="ri-arrow-down-s-line") {
+        x.className = "ri-arrow-right-s-line";
+      } else {
+        x.className = "ri-arrow-down-s-line";
+      }
+    }
+
+    function toggleNonTechEvents() {
+      var x = document.getElementById("nonTechEventsBtnContent");
+      if (x.className==="ri-arrow-down-s-line") {
+        x.className = "ri-arrow-right-s-line";
+      } else {
+        x.className = "ri-arrow-down-s-line";
+      }
+    }
+  </script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
