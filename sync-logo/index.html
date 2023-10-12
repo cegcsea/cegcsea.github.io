@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .centered-text {
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Roboto';
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/img/sync1.png" alt="Your Logo" class="logo">
+
+    <div class="centered-text" id="progress-text">
+        <p>in progress...</p>
+    </div>
+    <script>
+    elem = document.getElementById("progress-text");
+    timer = setInterval(function() {
+  if (elem.innerHTML == "in progress") {
+  	elem.innerHTML = "in progress.";
+  }
+  else if (elem.innerHTML == "in progress.") {
+  elem.innerHTML = "in progress..";
+  }
+  else if (elem.innerHTML == "in progress..") {
+  elem.innerHTML = "in progress...";
+  }
+  else {
+  elem.innerHTML = "in progress";
+  }
+}, 600);
+  </script>
+</body>
+</html>
