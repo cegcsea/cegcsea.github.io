@@ -62,6 +62,19 @@ input::placeholder {
     color: #666;
 }
 
+.center-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically on the viewport */
+}
+
+.center-input input {
+    text-align: center;
+    width: 200px;
+    margin-bottom: 0px;
+}
+
 button {
     width: 100%;
     padding: 10px;
@@ -74,6 +87,153 @@ button {
 
 button:hover {
     background: #2371a0;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.navbar {
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    /* Center-align text */
+    padding: 10px;
+    /* Add some padding for better visual */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the navigation bar title */
+.navbar-title {
+    font-family: 'Neucha', cursive;
+    font-size: 40px;
+    /* Adjust the font size as needed */
+    text-decoration: none;
+    /* Remove underlines from the link */
+    color: #fff;
+    /* Text color */
+}
+
+/* Style for the navigation bar logo */
+.navbar-logo {
+    max-height: 75px;
+    /* Adjust the height as needed */
+    padding-right: 5px;
+}
+
+.hero {
+    background-image: url('../img/Untitled-design-34.png');
+    /* Background image for the hero section */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+    /* Padding for the hero section */
+    height: 250px;
+    z-index: 49;
+}
+
+.hero::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black with 50% opacity */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 350px;
+}
+
+/* Style for the hero section title */
+.hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 50;
+}
+
+/* Style for the hero section description */
+.hero-description {
+    font-size: 18px;
+    width: 90%;
+    padding-left: 5%;
+    position: relative;
+    z-index: 50;
 }
 
 @media (min-width: 568px) {
@@ -100,46 +260,21 @@ button:hover {
         margin-top: 2%;
         margin-left: 28%;
     }
-}
 
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
-}
+    .hero {
+        padding-bottom: 100px;
+        padding-top: 50px;
+    }
 
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+    .hero::before {
+        height: 400px;
+    }
 
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
-}
+    .hero-title {
+        margin-top: 100px;
+    }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+    .hero-description {
+        margin-bottom: 100px;
+    }
 }
