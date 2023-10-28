@@ -28,10 +28,10 @@
     <div class="hero">
         <div class="hero-title">Join Us for the Alumni Meet!</div>
         <div class="hero-description">
-            The Department of CSE welcomes its CSE alumni on <b>the 19th of November 2023</b> for its annual alumni meet in Tag Auditorium.
+            The Department of CSE welcomes its CSE alumni on <b>the 19th of November 2023</b> for its annual alumni meet in <b>Tag Auditorium<b> @ <b>3 pm</b>
         </div>
         <div class="hero-subtitle">
-        Please fill the below form to register yourself as an attendee!
+        Please fill the below form to confirm your presence!
     </div>
     </div>
     <div class="main-block">
@@ -120,12 +120,12 @@ form.addEventListener("submit", function (event) {
                 //console.log(response.ok)
                 if (response.ok) {
                     showSuccessMessage();
-                    const button = form.querySelector("button");
-                    button.classList.remove("loading");
-                    button.disabled = false;
                     // You can add a delay before redirecting (e.g., 3 seconds) using setTimeout
                     setTimeout(function() {
                         window.location.href = 'https://cseaceg.org.in/'; // Replace with your redirect URL
+                        const button = form.querySelector("button");
+                    button.classList.remove("loading");
+                    button.disabled = false;
                     }, 3000); // 3000 milliseconds = 3 seconds
                 } else {
                     console.error('Error submitting form');
