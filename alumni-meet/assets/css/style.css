@@ -92,7 +92,6 @@ button:hover {
 #snackbar {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -103,6 +102,7 @@ button:hover {
     left: 50%;
     bottom: 30px;
     font-size: 17px;
+    transform: translateX(-50%);
 }
 
 #snackbar.show {
@@ -290,5 +290,56 @@ button:hover {
 
     .hero-subtitle {
         margin-top: 50px;
+    }
+}
+
+button {
+     background-color: #0071b2;
+     color: #fff;
+     border: 0 solid #015494;
+     border-radius: 5px;
+     font-size: 18px;
+     font-weight: 700;
+     padding: 0.75em 1em;
+     position: relative;
+}
+ button * {
+     transition: opacity 0.3s ease-in;
+}
+ button .loader {
+     position: absolute;
+     display: block;
+     fill: transparent;
+     top: calc(50% - 0.75rem);
+     left: calc(50% - 0.75rem);
+     width: 1.5rem;
+     height: 1.5rem;
+     animation: rotating 1.5s linear infinite;
+     display: none;
+     opacity: 0;
+}
+ button.loading span {
+     color: transparent;
+     opacity: 0;
+}
+ button.loading .loader {
+     fill: transparent;
+     display: block;
+     opacity: 1;
+}
+ @-webkit-keyframes rotating {
+     0% {
+         transform: rotate(0deg);
+    }
+     to {
+         transform: rotate(1turn);
+    }
+}
+ @keyframes rotating {
+     0% {
+         transform: rotate(0deg);
+    }
+     to {
+         transform: rotate(1turn);
     }
 }

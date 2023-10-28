@@ -28,7 +28,7 @@
     <div class="hero">
         <div class="hero-title">Join Us for the Alumni Meet!</div>
         <div class="hero-description">
-            The Department of CSE welcomes its CSE alumni on the 19th of November 2023 for its annual alumni meet in Tag Auditorium.
+            The Department of CSE welcomes its CSE alumni on <b>the 19th of November 2023</b> for its annual alumni meet in Tag Auditorium.
         </div>
         <div class="hero-subtitle">
         Please fill the below form to register yourself as an attendee!
@@ -52,13 +52,34 @@
             <div>
                 <textarea name="Message" rows="4"></textarea>
             </div>
-            <div class="center-input">
+            <button type="submit">
+      <span>Send</span>
+      <svg aria-hidden="true" focusable="false" class="loader loading" viewBox="0 0 38 38">
+        <g transform="translate(2 2)" stroke="currentColor" stroke-width="4" fill-rule="evenodd">
+          <circle class="st0" stroke-opacity=".5" cx="17" cy="17" r="16.5"></circle>
+          <path class="st1" d="M33.5 17C33.5 7.9 26.1.5 17 .5" transform="rotate(249.767 17 17)">
+            <animateTransform accumulate="none" additive="replace" attributeName="transform" calcMode="linear" dur="1s" from="0 17 17" repeatCount="indefinite" restart="always" to="360 17 17" type="rotate"></animateTransform>
+          </path>
+        </g>
+      </svg>
+    </button>
+            <!-- <div class="center-input">
                 <input type="button" value="Submit" onclick="submitForm()">
-            </div>
+            </div> -->
         </form>
+</div>
     </div>
-    <div id="snackbar">Form submitted successfully!</div>
+    <div id="snackbar">Form submitted successfully! Redirecting to CSEA!</div>
     <script>
+const form = document.getElementById("myForm");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const button = form.querySelector("button");
+  button.classList.add("loading");
+  button.disabled = true;
+  submitForm();
+});
     function submitForm() {
         var name = document.forms["myForm"]["Name"].value;
         var email = document.forms["myForm"]["Email"].value;
@@ -99,6 +120,9 @@
                 //console.log(response.ok)
                 if (response.ok) {
                     showSuccessMessage();
+                    const button = form.querySelector("button");
+                    button.classList.remove("loading");
+                    button.disabled = false;
                     // You can add a delay before redirecting (e.g., 3 seconds) using setTimeout
                     setTimeout(function() {
                         window.location.href = 'https://cseaceg.org.in/'; // Replace with your redirect URL
