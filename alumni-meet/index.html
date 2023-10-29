@@ -75,9 +75,6 @@ const form = document.getElementById("myForm");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  const button = form.querySelector("button");
-  button.classList.add("loading");
-  button.disabled = true;
   submitForm();
 });
     function submitForm() {
@@ -109,8 +106,12 @@ form.addEventListener("submit", function (event) {
             alert("Mobile number should be a 10-digit valid number.");
             return false;
         }
+
         const form = document.getElementById("myForm");
         const formData = new FormData(form);
+        const button = form.querySelector("button");
+        button.classList.add("loading");
+        button.disabled = true;
 
         fetch('https://script.google.com/macros/s/AKfycbym-abfaCOUpCxG0U78fKDNsvoC5EVmRzvJx-zSgpeLRoxwLO3fQUuUiYZvrmuAm0NRyw/exec', {
                 method: 'POST',
