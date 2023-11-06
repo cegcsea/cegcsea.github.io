@@ -127,12 +127,17 @@ form.addEventListener("submit", function (event) {
                         const button = form.querySelector("button");
                     button.classList.remove("loading");
                     button.disabled = false;
+                    clearForm();
                     }, 3000); // 3000 milliseconds = 3 seconds
                 } else {
                     console.error('Error submitting form');
                 }
             })
             .catch(error => console.error('Error submitting form', error));
+    }
+
+    function clearForm() {
+        document.forms["myForm"].reset();
     }
 
     function showSuccessMessage() {
