@@ -1,0 +1,345 @@
+html,
+body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-weight: 400;
+    color: #1c87c9;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c87c9;
+}
+
+form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 2px 5px #f5f5f5;
+    background: #f5f5f5;
+}
+
+.fas {
+    margin: 25px 10px 0;
+    font-size: 72px;
+    color: #fff;
+}
+
+.fa-envelope {
+    transform: rotate(-20deg);
+}
+
+.fa-at,
+.fa-mail-bulk {
+    transform: rotate(10deg);
+}
+
+input,
+textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #1c87c9;
+    outline: none;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+.center-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically on the viewport */
+}
+
+.center-input input {
+    text-align: center;
+    width: 200px;
+    margin-bottom: 0px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #1c87c9;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+button:hover {
+    background: #2371a0;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transform: translateX(-50%);
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.navbar {
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    /* Center-align text */
+    padding: 10px;
+    /* Add some padding for better visual */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the navigation bar title */
+.navbar-title {
+    font-family: 'Neucha', cursive;
+    font-size: 40px;
+    /* Adjust the font size as needed */
+    text-decoration: none;
+    /* Remove underlines from the link */
+    color: #fff;
+    /* Text color */
+}
+
+/* Style for the navigation bar logo */
+.navbar-logo {
+    max-height: 75px;
+    /* Adjust the height as needed */
+    padding-right: 10px;
+}
+
+.hero {
+    background-image: url('../img/Untitled-design-34.png');
+    /* Background image for the hero section */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+    /* Padding for the hero section */
+    height: 250px;
+    z-index: 49;
+}
+
+.hero::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black with 50% opacity */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 350px;
+}
+
+/* Style for the hero section title */
+.hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 50;
+}
+
+/* Style for the hero section description */
+.hero-description {
+    font-size: 18px;
+    width: 90%;
+    padding-left: 5%;
+    position: relative;
+    z-index: 50;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: 500;
+    width: 90%;
+    padding-left: 5%;
+    position: relative;
+    z-index: 50;
+    margin-top: 30px;
+}
+
+@media (min-width: 568px) {
+    .main-block {
+        flex-direction: row;
+    }
+
+    .left-part,
+    form {
+        width: 50%;
+    }
+
+    .fa-envelope {
+        margin-top: 0;
+        margin-left: 20%;
+    }
+
+    .fa-at {
+        margin-top: -10%;
+        margin-left: 65%;
+    }
+
+    .fa-mail-bulk {
+        margin-top: 2%;
+        margin-left: 28%;
+    }
+
+    .hero {
+        padding-bottom: 0px;
+    }
+
+    .hero::before {
+        height: 300px;
+    }
+
+    .hero-title {
+        margin-top: 0px;
+    }
+
+    .hero-description {
+        margin-top: 50px;
+    }
+
+    .hero-subtitle {
+        margin-top: 50px;
+    }
+}
+
+button {
+     background-color: #0071b2;
+     color: #fff;
+     border: 0 solid #015494;
+     border-radius: 5px;
+     font-size: 18px;
+     font-weight: 700;
+     padding: 0.75em 1em;
+     position: relative;
+}
+ button * {
+     transition: opacity 0.3s ease-in;
+}
+ button .loader {
+     position: absolute;
+     display: block;
+     fill: transparent;
+     top: calc(50% - 0.75rem);
+     left: calc(50% - 0.75rem);
+     width: 1.5rem;
+     height: 1.5rem;
+     animation: rotating 1.5s linear infinite;
+     display: none;
+     opacity: 0;
+}
+ button.loading span {
+     color: transparent;
+     opacity: 0;
+}
+ button.loading .loader {
+     fill: transparent;
+     display: block;
+     opacity: 1;
+}
+ @-webkit-keyframes rotating {
+     0% {
+         transform: rotate(0deg);
+    }
+     to {
+         transform: rotate(1turn);
+    }
+}
+ @keyframes rotating {
+     0% {
+         transform: rotate(0deg);
+    }
+     to {
+         transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alumni Meet 2023</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="assets/img/csea_grad.png" rel="icon">
+    <link href="assets/img/csea_grad.png" rel="apple-touch-icon">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Create a link to the homepage using an anchor (<a>) element -->
+        <a class="navbar-logo" href="https://cseaceg.org.in/">
+            <img src="assets/img/csea_grad_highlight.png" alt="Logo" class="navbar-logo">
+        </a>
+        <a class="navbar-title">ALUMNI MEET 2023</a>
+    </div>
+    <div class="hero">
+        <div class="hero-title">Join Us for the Alumni Meet!</div>
+        <div class="hero-description">
+            The Department of CSE welcomes its CSE alumni on <b>the 19th of November 2023</b> for its annual alumni meet in <b>Tag Auditorium<b> @ <b>3 pm</b>
+        </div>
+        <div class="hero-subtitle">
+        Please fill the below form to confirm your presence!
+    </div>
+    </div>
+    <div class="main-block">
+        <div class="left-part">
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-at"></i>
+            <i class="fas fa-mail-bulk"></i>
+        </div>
+        <form id="myForm">
+            <h1 style="text-align: center;">Alumni Contact Form</h1>
+            <div class="info">
+                <input class="fname" type="text" name="Name" placeholder="Full Name" required>
+                <input type="text" name="Email" placeholder="Email ID" required>
+                <input type="number" name="Year" placeholder="Year Of Passing" required>
+                <input type="text" name="Mobile" placeholder="Mobile Number" required>
+            </div>
+            <p>Any Message For Us?</p>
+            <div>
+                <textarea name="Message" rows="4"></textarea>
+            </div>
+            <button type="submit">
+      <span>Send</span>
+      <svg aria-hidden="true" focusable="false" class="loader loading" viewBox="0 0 38 38">
+        <g transform="translate(2 2)" stroke="currentColor" stroke-width="4" fill-rule="evenodd">
+          <circle class="st0" stroke-opacity=".5" cx="17" cy="17" r="16.5"></circle>
+          <path class="st1" d="M33.5 17C33.5 7.9 26.1.5 17 .5" transform="rotate(249.767 17 17)">
+            <animateTransform accumulate="none" additive="replace" attributeName="transform" calcMode="linear" dur="1s" from="0 17 17" repeatCount="indefinite" restart="always" to="360 17 17" type="rotate"></animateTransform>
+          </path>
+        </g>
+      </svg>
+    </button>
+            <!-- <div class="center-input">
+                <input type="button" value="Submit" onclick="submitForm()">
+            </div> -->
+        </form>
+</div>
+    </div>
+    <div id="snackbar">Form submitted successfully! Redirecting to CSEA!</div>
+    <script>
+const form = document.getElementById("myForm");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  submitForm();
+});
+    function submitForm() {
+        var name = document.forms["myForm"]["Name"].value;
+        var email = document.forms["myForm"]["Email"].value;
+        var year = document.forms["myForm"]["Year"].value;
+        var mobile = document.forms["myForm"]["Mobile"].value;
+
+        // Simple validation for the Name field (letters and spaces only)
+        if (!/^[A-Za-z\s]+$/.test(name)) {
+            alert("Name can only contain letters and spaces");
+            return false;
+        }
+
+        // Basic email validation using a regular expression
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+
+        // Year should be a number and a positive integer
+        if (isNaN(year) || year < 1960 || year > 2023) {
+            alert("Year of passing should be relevant (1960 - 2023)");
+            return false;
+        }
+
+        // Mobile number should be a valid number (you can add more validation as needed)
+        if (isNaN(mobile) || mobile.length !== 10) {
+            alert("Mobile number should be a 10-digit valid number.");
+            return false;
+        }
+
+        const form = document.getElementById("myForm");
+        const formData = new FormData(form);
+        const button = form.querySelector("button");
+        button.classList.add("loading");
+        button.disabled = true;
+
+        fetch('https://script.google.com/macros/s/AKfycbym-abfaCOUpCxG0U78fKDNsvoC5EVmRzvJx-zSgpeLRoxwLO3fQUuUiYZvrmuAm0NRyw/exec', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                //console.log(response.ok)
+                if (response.ok) {
+                    showSuccessMessage();
+                    // You can add a delay before redirecting (e.g., 3 seconds) using setTimeout
+                    setTimeout(function() {
+                        window.location.href = 'https://cseaceg.org.in/'; // Replace with your redirect URL
+                        const button = form.querySelector("button");
+                    button.classList.remove("loading");
+                    button.disabled = false;
+                    clearForm();
+                    }, 3000); // 3000 milliseconds = 3 seconds
+                } else {
+                    console.error('Error submitting form');
+                }
+            })
+            .catch(error => console.error('Error submitting form', error));
+    }
+
+    function clearForm() {
+        document.forms["myForm"].reset();
+    }
+
+    function showSuccessMessage() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+    }
+    </script>
+</body>
+
+</html>
