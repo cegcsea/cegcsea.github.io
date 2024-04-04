@@ -1024,3 +1024,11 @@ And also over write left & right padding with internal stylesheet for col*/
 .container1:hover .hover-text {
     opacity: 1;
 }
+
+.gallery-container {
+  display: none;
+}
+
+.active-gallery {
+  display: block;
+}
