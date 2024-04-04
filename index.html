@@ -805,8 +805,10 @@
         <div id="gallery" class="container div-padd about head">
             <div class="centre" style="margin-bottom:5%;">
                 <h1 class="head-under">Gallery</h1>
-                <button onclick="showGallery(1)">2023-2024</button>
-                <button onclick="showGallery(2)">2022-2023</button>
+            </div>
+            <div class="centre" style="margin-bottom:5%;">
+                <button onclick="showGallery(1)">Gallery 1</button>
+                <button onclick="showGallery(2)">Gallery 2</button>
             </div>
             <div id="gallery1" class="row row1 gallery-container active-galary" style="margin-bottom: 5%;"> 
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -1064,7 +1066,14 @@
     
         $body.css({'margin-right': 0, 'margin-bottom': 0});
     }
-    
+
+    function showGallery(galleryNum) {
+        var galleryContainers = document.getElementsByClassName("gallery-container");
+        for (var i = 0; i < galleryContainers.length; i++) {
+           galleryContainers[i].classList.remove("active-gallery");
+        }
+        document.getElementById("gallery" + galleryNum).classList.add("active-gallery");
+   }
   // Get the modal
   </script>
         
@@ -1146,13 +1155,6 @@
                 $(document).on("scroll", onScroll);
                 $(document).on("scroll", backToTop);
             });
-            function showGallery(galleryNum) {
-                var galleryContainers = document.getElementsByClassName("gallery-container");
-                for (var i = 0; i < galleryContainers.length; i++) {
-                    galleryContainers[i].classList.remove("active-gallery");
-                }
-                document.getElementById("gallery" + galleryNum).classList.add("active-gallery");
-            }
             function onScroll(event){
                 var scrollPos = $(document).scrollTop();
                 var $height = $(document).height();
