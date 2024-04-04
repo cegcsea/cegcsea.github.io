@@ -1029,6 +1029,6 @@ And also over write left & right padding with internal stylesheet for col*/
   display: none;
 }
 
-.active-gallery {
+#gallery1{
   display: block;
 }
