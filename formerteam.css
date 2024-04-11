@@ -1071,3 +1071,10 @@ And also over write left & right padding with internal stylesheet for col*/
     align-items: center;
   }
 }
+
+@media only screen and (max-width: 1150px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
