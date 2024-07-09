@@ -1,150 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
     <title>Cookies'24</title>
-</head>
-<style>
-
-    .carousel-container{
-        width: 560px;
-        margin: auto;
-        overflow: hidden;
-        position: absolute;
-        top:25%;
-        display:flex;
-        justify-content: center;
-    }
-
-    body {
+    <style>
+        body {
             min-height: 100vh;
             align-items: center;
         }
-    .carousel-slide{
-        display: flex;
-        width: 100%;
-        height: 800px;
-    }
 
-    img{
-        width: 570px;
-        height: 800px
-    }
+        .mini-container {
+            display:flex; 
+            justify-content: center;
+        }
 
-    #prevBtn{
-        position:absolute;
-        top:50%;
-        z-index: 100;
-        left: 10%;
-        background-color: rgba(1,27,50,0.8);
-        font-size: 30px;
-        cursor: pointer;
-        border-radius: 50%;
-        color:white;
-        height:56px;
-        text-align: center;
-        line-height:56px;
-        width:56px;
-    }
-
-    #nextBtn{
-        position:absolute;
-        top:50%;
-        z-index: 100;
-        right: 10%;
-        background-color: rgba(1,27,50,0.8);
-        font-size: 30px;
-        cursor: pointer;
-        border-radius: 50%;
-        color:white;
-        height:56px;
-        text-align: center;
-        line-height:56px;
-        width:56px;
-    }
-</style>
-<script src="https://kit.fontawesome.com/c3757521be.js" crossorigin="anonymous"></script>
-<body style="align-items: center">
-
-    <center><h2 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">C O O K I E S '24</h2></center>
+        .carousel-container {
+            width: 560px;
+            margin: auto;
+            overflow: hidden;
+            position: absolute;
+            top:25%;
+            display:flex;
+            justify-content: center;
+        }
     
-    <div style="display:flex; justify-content: center">
-        <div><i class="fa-solid fa-arrow-left button" id="prevBtn"></i></div> 
-        <div><i class="fa-solid fa-arrow-right button" id="nextBtn"></i></div>
-        <div><a style="text-decoration: none; font-family: 'Courier New', Courier, monospace; margin-bottom: 3%; margin-top: 3%; font-style: italic;" href="./Cookies'24.pdf" download="Cookies '24">Click here to download</a></div>
+        .carousel-slide {
+            display: flex;
+            width: 100%;
+            height: 800px;
+        }
     
-    <div class="carousel-container">
-        <div class="carousel-slide">
-            <img src="./Cookies-Images/Cookies'24_page-0024.jpg" id="lastClone" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0001.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0002.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0003.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0004.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0005.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0006.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0007.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0008.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0009.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0010.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0011.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0012.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0013.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0014.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0015.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0016.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0017.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0018.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0019.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0020.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0021.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0022.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0023.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0024.jpg" alt="">
-            <img src="./Cookies-Images/Cookies'24_page-0001.jpg" id="firstClone" alt="">
-        </div>
+        img {
+            width: 570px;
+            height: 800px
+        }
+    
+        #prevBtn {
+            position:absolute;
+            top:50%;
+            z-index: 100;
+            left: 10%;
+            background-color: rgba(1,27,50,0.8);
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 50%;
+            color:white;
+            height:56px;
+            text-align: center;
+            line-height:56px;
+            width:56px;
+        }
+    
+        #nextBtn {
+            position:absolute;
+            top:50%;
+            z-index: 100;
+            right: 10%;
+            background-color: rgba(1,27,50,0.8);
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 50%;
+            color:white;
+            height:56px;
+            text-align: center;
+            line-height:56px;
+            width:56px;
+        }
+
+        @media (min-width: 635px) {
+            body {
+                min-height: 150vh;
+            }
+        }
+
+        @media (min-device-width: 0px) and (max-device-width: 634px) {
+            body {
+                min-height: 100vh;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/c3757521be.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-bottom: 2%; padding-top: 2%;">C O O K I E S '24</h2>
+        </center>   
+        <center>
+            <a style="text-decoration: none; font-family: 'Courier New', Courier, monospace; margin-bottom: 3%; margin-top: 3%; font-style: italic;" href="./Cookies'24.pdf" download="Cookies '24">Click here to download</a>
+        </center>
         
+        <div class="mini-container">
+            <div>
+                <i class="fa-solid fa-arrow-left button" id="prevBtn"></i>
+            </div> 
+            <div>
+                <i class="fa-solid fa-arrow-right button" id="nextBtn"></i>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="./Cookies-Images/Cookies'24_page-0024.jpg" id="lastClone" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0001.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0002.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0003.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0004.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0005.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0006.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0007.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0008.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0009.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0010.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0011.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0012.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0013.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0014.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0015.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0016.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0017.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0018.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0019.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0020.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0021.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0022.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0023.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0024.jpg" alt="" />
+                    <img src="./Cookies-Images/Cookies'24_page-0001.jpg" id="firstClone" alt="" />
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    
 </body>
-<script>
-    const carouselSlide = document.querySelector('.carousel-slide');
-    const carouselImages = document.querySelectorAll('.carousel-slide img');
 
-    const prevBtn = document.querySelector('#prevBtn');
-    const nextBtn = document.querySelector('#nextBtn');
-
-    let counter = 1;
-    const size = carouselImages[0].clientWidth;
-
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-
-    nextBtn.addEventListener('click', ()=>{
-        if(counter >= carouselImages.length - 1) return;
-        carouselSlide.style.transition = "transform 1s ease-in-out";
-        counter++;
-        carouselSlide.style.transform =  'translateX(' + (-size * counter) + 'px)';
-    });
-
-    prevBtn.addEventListener('click', ()=>{
-        if(counter <= 0) return;
-        carouselSlide.style.transition = "transform 1s ease-in-out";
-        counter--;
-        carouselSlide.style.transform =  'translateX(' + (-size * counter) + 'px)';
-    });
-
-    carouselSlide.addEventListener('transitionend', ()=>{
-        if (carouselImages[counter].id === 'lastClone') {
-            carouselSlide.style.transition = "none";
-            counter= carouselImages.length - 2;
-            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        }
-
-        if (carouselImages[counter].id === 'firstClone') {
-            carouselSlide.style.transition = "none";
-            counter= carouselImages.length - counter;
-            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        }
-    });
-</script>
 </html>
